@@ -13,7 +13,8 @@ import logging
 # Configure logging to reduce noise
 logging.getLogger("mcp").setLevel(logging.WARNING)
 
-mcp = FastMCP("Demo: Elicitation MCP Server")
+port = int(os.environ.get("PORT", 8000))
+mcp = FastMCP("Demo: Elicitation MCP Server", host="0.0.0.0", port=port)
 
 
 class ElicitationSchema:
