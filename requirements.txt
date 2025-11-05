@@ -1,0 +1,79 @@
+annotated-types==0.7.0
+    # via pydantic
+anyio==4.9.0
+    # via
+    #   httpx
+    #   mcp
+    #   sse-starlette
+    #   starlette
+attrs==25.4.0
+    # via
+    #   cyclopts
+    #   jsonschema
+    #   referencing
+authlib==1.6.5
+    # via fastmcp
+backports-tarfile==1.2.0 ; python_full_version < '3.12'
+    # via jaraco-context
+beartype==0.22.5
+    # via
+    #   py-key-value-aio
+    #   py-key-value-shared
+cachetools==6.2.1
+    # via py-key-value-aio
+certifi==2025.6.15
+    # via
+    #   httpcore
+    #   httpx
+    #   requests
+cffi==2.0.0 ; platform_python_implementation != 'PyPy'
+    # via cryptography
+charset-normalizer==3.4.4
+    # via requests
+click==8.2.1
+    # via
+    #   typer
+    #   uvicorn
+colorama==0.4.6 ; sys_platform == 'win32'
+    # via click
+cryptography==46.0.3
+    # via
+    #   authlib
+    #   pyjwt
+    #   secretstorage
+cyclopts==4.2.1
+    # via fastmcp
+diskcache==5.6.3
+    # via py-key-value-aio
+dnspython==2.8.0
+    # via email-validator
+docstring-parser==0.17.0
+    # via cyclopts
+docutils==0.22.2
+    # via rich-rst
+email-validator==2.3.0
+    # via pydantic
+exceptiongroup==1.3.0
+    # via fastmcp
+fastmcp==2.13.0.2
+    # via mcp-elicitation-example
+h11==0.16.0
+    # via
+    #   httpcore
+    #   uvicorn
+httpcore==1.0.9
+    # via httpx
+httpx==0.28.1
+    # via
+    #   fastmcp
+    #   mcp
+httpx-sse==0.4.0
+    # via mcp
+idna==3.10
+    # via
+    #   anyio
+    #   email-validator
+    #   httpx
+    #   requests
+importlib-metadata==8.7.0 ; python_full_version < '3.12'
+    # via keyring
