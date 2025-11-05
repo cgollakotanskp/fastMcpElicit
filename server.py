@@ -9,6 +9,7 @@ from typing import Dict, Any
 from datetime import datetime
 import anyio
 import logging
+import os
 
 # Configure logging to reduce noise
 logging.getLogger("mcp").setLevel(logging.WARNING)
