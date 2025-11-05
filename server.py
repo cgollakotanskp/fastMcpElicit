@@ -166,3 +166,6 @@ async def book_table(ctx: Context, date: str = "", party_size: int = 0) -> str:
     except Exception as e:
         print(f"Unexpected error in book_table: {e}")
         return f"❌ Booking failed due to unexpected error: {str(e)}"
+
+if __name__ == "__main__":
+    mcp.run(transport="streamable-http")
