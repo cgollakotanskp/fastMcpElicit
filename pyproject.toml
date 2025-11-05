@@ -1,0 +1,10 @@
+[project]
+name = "mcp-elicitation-example"
+version = "0.1.0"
+description = "MCP elicitation demo - interactive table booking system"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastmcp>=2.13.0.1",
+    "mcp[cli]>=1.19.0",
+]
