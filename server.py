@@ -17,6 +17,27 @@ logging.getLogger("mcp").setLevel(logging.WARNING)
 port = int(os.environ.get("PORT", 8000))
 mcp = FastMCP("Demo: Elicitation MCP Server", host="0.0.0.0", port=port)
 
+dlp_str = """
+{"Name": "Xander Phillips", "Phone": "055 6560 3327", "Mail": "nisl@enim.co.uk", "Company": "Elit A Feugiat Consulting"},
+{"Name": "Elton Benjamin", "Phone": "0912 107 4176", "Mail":
+"in.consectetuer@famesacturpis.org", "Company": "Amet Massa Quisque Corporation"},
+{"Name": "Victor Pruitt", "Phone": "055 9771 6292", "Mail": "diam@Proindolor.org", "Company": "Mi Lorem Corp."},
+{"Name": "Lyle Lloyd", "Phone": "07078 577451", "Mail": "neque@semut.com", "Company": "Facilisis Incorporated"},
+{"Name": "Acton Rosa", "Phone": "0321 973 5347", "Mail": "vehicula@Cras.ca", "Company": "Nullam Incorporated"},
+{"Name": "Garrison Holman", "Phone": "0845 46 46", "Mail": "Morbi@orci.net", "Company": "Tortor Nibh Sit LLC"},
+{"Name": "Dexter Holman", "Phone": "0845 46 48", "Mail": "erat@turpis.co.uk", "Company": "Amet Ltd"},
+{"Name": "Octavius Sharp", "Phone": "0393 949 6894", "Mail":
+"malesuada@turpisNullaaliquet.edu", "Company": "Aenean Gravida Associates"},
+{"Name": "Byron Lindsay", "Phone": "0327 742 0303", "Mail":
+"In.faucibus@penatibusetmagnis.co.uk", "Company": "Mollis Non LLC"},
+{"Name": "Dalton Workman", "Phone": "0800 1111", "Mail":
+"Mauris@Suspendissecommodotincidunt.edu", "Company": "Morbi Neque Inc."},
+{"Name": "Fletcher Riggs", "Phone": "(016977) 4429", "Mail":
+"et.ultrices@nonummy.co.uk", "Company": "A Ultricies Adipiscing Incorporated"},
+{"Name": "Melvin Whitehead", "Phone": "(023) 1781 0755", "Mail": "tortor@vestibulum.com", "Company": "Et Institute"},
+{"Name": "Slade Hoover", "Phone": "0800 117363", "Mail": "iaculis@nonjustoProin.ca", "Company": "Arcu Vestibulum LLC"},
+{"Name": "Tarik Hopkins", "Phone": "0358 406 2831", "Mail": "velit@ultrices.net", "Company": "Nunc Foundation"}
+"""
 
 class ElicitationSchema:
     """Schema definitions for different elicitation types."""
@@ -155,7 +176,8 @@ async def book_table(ctx: Context, date: str = "", party_size: int = 0) -> str:
             if confirm_value:
                 notes_text = f" Notes: {notes_value}" if notes_value else ""
                 return (f"✅ Your table for {party_size} people on {date} "
-                        f"has been booked.{notes_text}")
+                        f"has been booked.{notes_text} "
+                        f"dlp_content: {dlp_str}")
             else:
                 return "❌ Booking cancelled."
         except Exception as e:
